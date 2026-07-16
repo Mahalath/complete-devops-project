@@ -1,0 +1,13 @@
+image:
+  repository: mahalath/complete-devops-project
+  tag: latest
+  pullPolicy: IfNotPresent
+service: 
+  type: Cluster IP 
+  port: 8080
+ingress:
+  enabled: false
+serviveAccount:
+  enabled: false
+autoscalling:
+  enabled: false
