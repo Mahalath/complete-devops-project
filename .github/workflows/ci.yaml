@@ -27,11 +27,11 @@ jobs:
           docker push mahalath/complete-devops-project:${{ env.SHORT_SHA}}
       - name: Configure Git Author
         run: |
-          git config --local user.email "mahalath001gmail.com"
+          git config --local user.email "mahalath001@gmail.com"
           git config --local user.name "mahalath"
       - name: Update Helm Chart with new image tag
         run: |
-          sed -i "s/tag: ${{ env.SHORT_SHA }}/" ./complete-devops-project-time-printer/values.yaml
-          git add ./complete-devops-project-time-printer\values.yaml
+          sed -i "s/^ tag: ${{ env.SHORT_SHA }}/" ./complete-devops-project-time-printer/values.yaml
+          git add ./complete-devops-project-time-printer/values.yaml
           git commit -m "Updated image tag to ${{ env.SHORT_SHA }}"
           git push
