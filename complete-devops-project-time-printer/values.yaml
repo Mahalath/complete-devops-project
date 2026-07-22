@@ -3,11 +3,13 @@ image:
   tag: cf88c3a
   pullPolicy: IfNotPresent
 service: 
-  type: Cluster IP 
+  type: ClusterIP 
   port: 8080
 ingress:
   enabled: false
+httpRoute:
+  enabled: false
 serviceAccount:
   enabled: false
-autoscalling:
+autoscaling:
   enabled: false
