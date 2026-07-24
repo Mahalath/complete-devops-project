@@ -1,6 +1,6 @@
 image:
   repository: mahalath/complete-devops-project
-  tag: da9a9e3
+  tag: 0046021
   pullPolicy: IfNotPresent
 service: 
   type: ClusterIP 
